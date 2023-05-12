@@ -1,15 +1,370 @@
+$bg: #f6fafb;
+$fundoImage: #d0e9fe;
+$textoAzul: #6a97da;
+$alerta: #f8d6dc;
+$vermelhoGrafico: #be444d;
+$logOut: #bbbfc0;
+$fundoLaterias: #e1eefa;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 html{
     font-size: 62.5%;
+    text-decoration: none;
+}
+
+.yellow{
+    background: yellow;
+}
+
+.blue{
+    background: $textoAzul;
+}
+
+.roxo{
+    background: purple;
+}
+
+.red{
+    background: red;
+}
+
+.aprovado{
+    background: $fundoImage;
+    color: $textoAzul;
+}
+
+.reprovado{
+    background: #edafaf;
+    color: red;
 }
 
 .container{
     border: 1px solid red;
     height: 100vh;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    background: $bg;
+
+    #aside{
+        display: flex;
+        flex-direction: column;
+        background: $fundoLaterias;
+
+        .logo{
+            height: 9rem;
+            display: flex;
+            align-items: center;
+            padding: 1.3rem;
+            font-size: 1.5rem;
+            color: $textoAzul;
+
+            i{
+                margin-right: .7rem;
+                font-size: 3rem;
+            }
+        }
+
+        nav{
+            height: 65rem;
+            display: grid;
+            grid-template-rows: repeat(7, 1fr00);
+
+            .nav-item{
+                display: flex;
+                align-items: center;
+                padding: 1.3rem;
+                font-size: 1.3rem;
+                color: $logOut;
+
+                i{
+                    margin-right: 1.3rem;
+                    font-size: 2.1rem;
+                }
+            }
+
+            .selecionado{
+                color: black;
+                border-right: .3rem solid $textoAzul;
+            }
+        }
+    }
+
+    #main{
+        display: grid;
+        grid-template-rows: 10rem 2fr 5fr;
+
+        .main-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 3rem 2rem 0 2rem;
+
+            h2{
+                font-size: 2.3rem;
+            }
+
+            .barra-pesquisa{
+                height: 3rem;
+                width: 57rem;
+                background: $fundoLaterias;
+                border-radius: 1.3rem;
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+
+                i{
+                    font-size: 2rem;
+                    color: $logOut;
+                    margin-right: 1rem;
+                }
+
+                input{
+                    width: 55rem;
+                    background: $fundoLaterias;
+                    border: none;
+                    outline: none;
+                    color: $logOut; 
+                }
+            }
+        }
+
+        .img{
+            padding: 2rem;
+
+            .borda{
+                background: $fundoImage;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem;
+                border-radius: 2.3rem;
+
+                .text{
+                    height: 100%;
+                    width: 45rem;
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 2rem;
+
+                    h1{
+                        font-size: 4rem;
+                        font-weight: 300;
+                        color: $textoAzul;
+                        margin-bottom: 2rem;
+                    }
+
+                    p{
+                        font-size: 1.7rem;
+                        text-align: justify;
+                        font-style: italic;
+                        font-weight: 200;
+                    }
+                }
+
+                img{
+                    width: 45%;
+                    height: 15rem;
+                }
+            }
+        }
+
+        .graphs{
+            display: flex;
+            padding: 2rem;
+
+            .today{
+                width: 50%;
+                display: grid;
+                grid-template-rows: 4rem repeat(4, 1fr);
+                gap: 1rem;
+                padding: 0 1rem 0 1rem;
+
+                h3{
+                    font-size: 1.7rem;
+                }
+
+                .classes{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background: $fundoLaterias;
+                    border-radius: 1.3rem;
+
+                    .left{
+                        display: flex;
+                        align-items: center;
+                        margin-left: 1rem;
+
+                        .fundo{
+                            width: 8rem;
+                            height: 8rem;
+                            margin-right: 1.3rem;
+                        }
+
+                        span{
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    .progresso{
+                        img{
+                            width: 10rem;
+                        }
+                    }
+                }
+
+                .graph{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    grid-row: 2 / 6;
+                    background: $fundoLaterias;
+                    border-radius: 1.3rem;
+                    padding: 2rem;
+
+                    h3{
+                        font-size: 2.3rem;
+                        color: $textoAzul;
+                    }
+                    
+                    img{
+                        width: 27rem;
+                        padding: 1rem 0 1rem 0;
+                    }
+
+                    .legenda{
+                        width: 30rem;
+                        height: 15rem;
+                        display: grid;
+                        grid-template-rows: repeat(4, 1fr);
+
+                        .legend{
+                            display: flex;
+                            align-items: center;
+                            padding: .3rem;
+
+                            .amarelo{
+                                width: 3rem;
+                                height: 3rem;
+                                margin-right: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #section{
+        background: $fundoLaterias;
+
+        .perfil{
+            display: grid;
+            grid-template-rows: 3rem 1fr 5rem;
+            gap: 2rem;
+            padding: 3rem 0 2rem 0;
+
+            .logout{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                color: $logOut;
+                padding: 1.3rem;
+
+                h3{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    margin-right: .5rem;
+                }
+
+                i{
+                    font-size: 2rem;
+                }
+            }
+
+            .foto{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i{
+                    font-size: 23rem;
+                }
+            }
+
+            .nome{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h4{
+                    font-size: 1.5rem;
+                }
+                
+                span{
+                    font-size: 1rem;
+                    color: $logOut;
+                }
+            }
+        }
+
+        .score{
+            display: grid;
+            grid-template-rows: 4rem repeat(3, 1fr);
+            padding: 1rem;
+            margin-bottom: 2rem;
+            gap: 1rem;
+
+            .texto{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h3{
+                    font-size: 1.7rem;
+                }
+
+                .all{
+                    color: $logOut;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.3rem;
+                }
+            }
+
+            .materia{
+                display: flex;
+                align-items: center;
+                font-size: 1.3rem;
+
+                .quadrado{
+                    width: 4rem;
+                    height: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 1rem;
+                    border-radius: .5rem;
+                    font-size: 1.5rem;
+
+                    i{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
 }

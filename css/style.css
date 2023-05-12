@@ -1,15 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
   font-size: 62.5%;
+  text-decoration: none;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.blue {
+  background: #6a97da;
+}
+
+.roxo {
+  background: purple;
+}
+
+.red {
+  background: red;
+}
+
+.aprovado {
+  background: #d0e9fe;
+  color: #6a97da;
+}
+
+.reprovado {
+  background: #edafaf;
+  color: red;
 }
 
 .container {
   border: 1px solid red;
   height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  background: #f6fafb;
+}
+.container #aside {
+  display: flex;
+  flex-direction: column;
+  background: #e1eefa;
+}
+.container #aside .logo {
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  padding: 1.3rem;
+  font-size: 1.5rem;
+  color: #6a97da;
+}
+.container #aside .logo i {
+  margin-right: 0.7rem;
+  font-size: 3rem;
+}
+.container #aside nav {
+  height: 65rem;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr00);
+}
+.container #aside nav .nav-item {
+  display: flex;
+  align-items: center;
+  padding: 1.3rem;
+  font-size: 1.3rem;
+  color: #bbbfc0;
+}
+.container #aside nav .nav-item i {
+  margin-right: 1.3rem;
+  font-size: 2.1rem;
+}
+.container #aside nav .selecionado {
+  color: black;
+  border-right: 0.3rem solid #6a97da;
+}
+.container #main {
+  display: grid;
+  grid-template-rows: 10rem 2fr 5fr;
+}
+.container #main .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 2rem 0 2rem;
+}
+.container #main .main-header h2 {
+  font-size: 2.3rem;
+}
+.container #main .main-header .barra-pesquisa {
+  height: 3rem;
+  width: 57rem;
+  background: #e1eefa;
+  border-radius: 1.3rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.container #main .main-header .barra-pesquisa i {
+  font-size: 2rem;
+  color: #bbbfc0;
+  margin-right: 1rem;
+}
+.container #main .main-header .barra-pesquisa input {
+  width: 55rem;
+  background: #e1eefa;
+  border: none;
+  outline: none;
+  color: #bbbfc0;
+}
+.container #main .img {
+  padding: 2rem;
+}
+.container #main .img .borda {
+  background: #d0e9fe;
+  height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 2.3rem;
+}
+.container #main .img .borda .text {
+  height: 100%;
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.container #main .img .borda .text h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #6a97da;
+  margin-bottom: 2rem;
+}
+.container #main .img .borda .text p {
+  font-size: 1.7rem;
+  text-align: justify;
+  font-style: italic;
+  font-weight: 200;
+}
+.container #main .img .borda img {
+  width: 45%;
+  height: 15rem;
+}
+.container #main .graphs {
+  display: flex;
+  padding: 2rem;
+}
+.container #main .graphs .today {
+  width: 50%;
+  display: grid;
+  grid-template-rows: 4rem repeat(4, 1fr);
+  gap: 1rem;
+  padding: 0 1rem 0 1rem;
+}
+.container #main .graphs .today h3 {
+  font-size: 1.7rem;
+}
+.container #main .graphs .today .classes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e1eefa;
+  border-radius: 1.3rem;
+}
+.container #main .graphs .today .classes .left {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+.container #main .graphs .today .classes .left .fundo {
+  width: 8rem;
+  height: 8rem;
+  margin-right: 1.3rem;
+}
+.container #main .graphs .today .classes .left span {
+  font-size: 1.3rem;
+}
+.container #main .graphs .today .classes .progresso img {
+  width: 10rem;
+}
+.container #main .graphs .today .graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row: 2/6;
+  background: #e1eefa;
+  border-radius: 1.3rem;
+  padding: 2rem;
+}
+.container #main .graphs .today .graph h3 {
+  font-size: 2.3rem;
+  color: #6a97da;
+}
+.container #main .graphs .today .graph img {
+  width: 27rem;
+  padding: 1rem 0 1rem 0;
+}
+.container #main .graphs .today .graph .legenda {
+  width: 30rem;
+  height: 15rem;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+.container #main .graphs .today .graph .legenda .legend {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+}
+.container #main .graphs .today .graph .legenda .legend .amarelo {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.5rem;
+}
+.container #section {
+  background: #e1eefa;
+}
+.container #section .perfil {
+  display: grid;
+  grid-template-rows: 3rem 1fr 5rem;
+  gap: 2rem;
+  padding: 3rem 0 2rem 0;
+}
+.container #section .perfil .logout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #bbbfc0;
+  padding: 1.3rem;
+}
+.container #section .perfil .logout h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+.container #section .perfil .logout i {
+  font-size: 2rem;
+}
+.container #section .perfil .foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container #section .perfil .foto i {
+  font-size: 23rem;
+}
+.container #section .perfil .nome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container #section .perfil .nome h4 {
+  font-size: 1.5rem;
+}
+.container #section .perfil .nome span {
+  font-size: 1rem;
+  color: #bbbfc0;
+}
+.container #section .score {
+  display: grid;
+  grid-template-rows: 4rem repeat(3, 1fr);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+.container #section .score .texto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container #section .score .texto h3 {
+  font-size: 1.7rem;
+}
+.container #section .score .texto .all {
+  color: #bbbfc0;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.container #section .score .materia {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.container #section .score .materia .quadrado {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+.container #section .score .materia .quadrado i {
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */

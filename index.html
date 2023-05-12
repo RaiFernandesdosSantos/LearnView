@@ -6,10 +6,217 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Prova B</title>
     </head>
     <body>
-        <div class="container"></div>
+        <div class="container">
+            <aside id="aside">
+                <div class="logo">
+                    <i class='bx bx-edit'></i>
+                    <h2>LetsLearn</h2>
+                </div>
+
+                <nav>
+                    <div class="nav-item selecionado">
+                        <i class='bx bx-home'></i>
+                        <span>My Dashboard</span>
+                    </div>
+
+                    <div class="nav-item">
+                        <i class='bx bxs-grid'></i>
+                        <span>Classes</span>
+                    </div>
+
+                    <div class="nav-item">
+                        <i class='bx bxs-plus-square'></i>
+                        <span>Resources</span>
+                    </div>
+
+                    <div class="nav-item">
+                        <i class='bx bx-calendar'></i>
+                        <span>Schedule</span>
+                    </div>
+
+                    <div class="nav-item">
+                        <i class='bx bx-message'></i>
+                        <span>Messages</span>
+                    </div>
+
+                    <div class="nav-item">
+                        <i class='bx bx-user'></i>
+                        <span>Profile</span>
+                    </div>
+
+                    <div class="nav-item">
+                        <i class='bx bx-edit-alt'></i>
+                        <span>Settings</span>
+                    </div>  
+                </nav>
+            </aside>
+
+            <main id="main">
+                <div class="main-header">
+                    <h2>My Dashboard</h2>
+
+                    <div class="barra-pesquisa">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="What are you looking for?">
+                    </div>
+                </div>
+
+                <div class="img">
+                    <div class="borda">
+                        <div class="text">
+                            <h1>Good Morning Alice!</h1>
+                            <p>"Education is the ability to listen to almost anything <br> without losing your temper or self-confidence."</p>
+                        </div>
+                        <img src="img/alunos.png" alt="">
+                    </div>
+                </div>
+
+                <div class="graphs">
+                    <div class="today">
+                        <h3>Today Classes</h3>
+                        <div class="classes">
+                            <div class="left">
+                                <div class="fundo blue"></div>
+                                <span>Physics - Chapter 5</span>
+                            </div>
+                            <div class="progresso">
+                                <img src="img/fisica.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="classes">
+                            <div class="left">
+                                <div class="fundo yellow"></div>
+                                <span>Mathematics - Chapter 4</span>
+                            </div>
+                            <div class="progresso">
+                                <img src="img/matematica.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="classes">
+                            <div class="left">
+                                <div class="fundo red"></div>
+                                <span>Language - Unit 2</span>
+                            </div>
+                            <div class="progresso">]
+                                <img src="img/linguagem.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="classes">
+                            <div class="left">
+                                <div class="fundo roxo"></div>
+                                <span>Biology - Chapter 2</span>
+                            </div>
+                            <div class="progresso">
+                                <img src="img/biologia.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="today">
+                        <h3>Time Spent</h3>
+                        <div class="graph">
+                            <h3>Good job, keep going!</h3>
+                            <img src="img/horas.png" alt="">
+                            <div class="legenda">
+                                <div class="legend">
+                                    <div class="amarelo yellow"></div>
+                                    <span>Mathematics - 45 mins</span>
+                                </div>
+                                <div class="legend ">
+                                    <div class="amarelo blue"></div>
+                                    <span>Physics - 1 hours 2 mins</span>
+                                </div>
+                                <div class="legend ">
+                                    <div class="amarelo roxo"></div>
+                                    <span>Biology - 2 hours 5 min</span>
+                                </div>
+                                <div class="legend ">
+                                    <div class="amarelo red"></div>
+                                    <span>Language - 40 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <section id="section">
+                <div class="perfil">
+                    <div class="logout">
+                        <h3>Log Out</h3>
+                        <i class='bx bx-power-off'></i>
+                    </div>
+
+                    <div class="foto">
+                        <i class='bx bxs-user-circle'></i>
+                    </div>
+
+                    <div class="nome">
+                        <h4>Alice Potter</h4>
+                        <span>Student Grade 8</span>
+                    </div>
+                </div>
+
+                <div class="score">
+                    <div class="texto">
+                        <h3>Latest Score</h3>
+
+                        <div class="all">
+                            <span>View all</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                    </div>
+
+                    <div class="materia">
+                        <div class="quadrado aprovado"><span>8.5</span></div>
+                        <span>Physics - Chapter 5</span>
+                    </div>
+
+                    <div class="materia">
+                        <div class="quadrado aprovado"><span>9.5</span></div>
+                        <span>Mathematics - Unit 3</span>
+                    </div>
+
+                    <div class="materia">
+                        <div class="quadrado reprovado"><span>2.0</span></div>
+                        <span>Biology - Chapter 4</span>
+                    </div>
+                </div>
+
+                <div class="score">
+                    <div class="texto">
+                        <h3>Reminder</h3>
+                    
+                        <div class="all">
+                            <span>View all</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                    </div>
+                    
+                    <div class="materia">
+                        <div class="quadrado reprovado"><i class='bx bxs-error-circle'></i></div>
+                        <span>Physics Homework</span>
+                    </div>
+                
+                    <div class="materia">
+                        <div class="quadrado aprovado"><i class='bx bx-message'></i></div>
+                        <span>Teacher Amy's message</span>
+                    </div>
+                
+                    <div class="materia">
+                        <div class="quadrado aprovado"><i class='bx bx-message'></i></div>
+                        <span>Teacher James message</span>
+                    </div>
+                </div>
+            </section>
+        </div>
     </body>
 </html>
