@@ -1,4 +1,4 @@
-# ProvaTads2
+# LearnView
 
 Este projeto consiste em um dashboard desenvolvido como parte da avaliação do segundo semestre do curso de Analise e Desenvolvimento de Sistemas no IFMS Campi Três Lagoas.
 
