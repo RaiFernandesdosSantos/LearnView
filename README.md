@@ -12,6 +12,7 @@ Este dashboard tem como principal objetivo aplicar de forma prática os conhecim
 
 ## Estrutura do Projeto
 
+```
 /
 |-- index.html
 |-- css/
@@ -27,6 +28,7 @@ Este dashboard tem como principal objetivo aplicar de forma prática os conhecim
 | |-- matematica.png
 |-- README.md
 |-- image.png
+```
 
 ## Contato
 
